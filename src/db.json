@@ -1,0 +1,25 @@
+{
+  "shops": [
+    {
+      "id": "1",
+      "name": "Electronics Store",
+      "description": "Best electronics in town",
+      "logoUrl": "https://placeholder.com/150",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "shopId": "1",
+      "name": "Smartphone",
+      "price": 699.99,
+      "stockLevel": 50,
+      "description": "Latest model smartphone",
+      "imageUrl": "https://placeholder.com/150",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    }
+  ]
+}
