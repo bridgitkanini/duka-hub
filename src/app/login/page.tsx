@@ -10,6 +10,7 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const router = useRouter();
 
+  // Modify your handleSubmit function in app/login/page.tsx
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -20,16 +21,18 @@ export default function LoginPage() {
         body: JSON.stringify({ email, password }),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error("Login failed");
+        throw new Error(data.error || "Login failed");
       }
 
       router.push("/shops");
     } catch (err) {
-      setError("Invalid credentials");
+      setError(err instanceof Error ? err.message : "Invalid credentials");
     }
   };
-
+  
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-xl shadow-lg">
