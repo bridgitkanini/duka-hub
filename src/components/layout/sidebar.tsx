@@ -7,7 +7,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 bg-gray-50 min-h-screen p-4">
+    <aside className="w-64 bg-gray-50 min-h-screen p-4 text-black">
       <nav className="space-y-2">
         <Link
           href="/products"
